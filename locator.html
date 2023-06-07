@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ducati Dealer Locator</title>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('Ducati_USA.png');
+      background-repeat: no-repeat;
+    background-size: 110vw 180vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 97%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    button {
+      background-color: black;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: gray;
+    }
+    .dealer-list {
+      margin-top: 20px;
+    }
+    .dealer-list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .dealer-info {
+      flex: 1;
+    }
+    .dealer-name {
+      font-weight: bold;
+    }
+    .dealer-address {
+      color: #888;
+    }
+    .dealer-phone {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          
+          
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" >
+                    <tr><img src="ducati logo.PNG" width="60" height="60"></tr>
+               
+                  </div>
+            </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h1>Find a Ducati Dealer</h1>
+    <form action="/search" method="post">
+      <label for="location">Enter your location:</label>
+      <input type="text" id="location" name="location" required>
+      <br>
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="dealer-list">
+      <div class="dealer-list-item">
+        <div class="dealer-info">
+          <div class="dealer-name">Ducati Dealer 1</div>
+          <div class="dealer-address">123 Main Street, City, Country</div>
+          <div class="dealer-phone">Phone: 123-456-7890</div>
+        </div>
+      </div>
+
+      <div class="dealer-list-item">
+        <div class="dealer-info">
+          <div class="dealer-name">Ducati Dealer 2</div>
+          <div class="dealer-address">456 Elm Street, City, Country</div>
+          <div class="dealer-phone">Phone: 987-654-3210</div>
+        </div>
+      </div>
+
+   
+
+    </div>
+  </div>
+</body>
+</html>

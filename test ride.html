@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ducati Test Ride</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('ducati TR.JPG');
+      background-repeat: no-repeat;
+    background-size: 100vw 120vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 97%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    button {
+      background-color: black;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: maroon;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          
+          
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" >
+                    <tr><img src="ducati logo.PNG" width="60" height="60"></tr>
+               
+                  </div>
+            </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h1>Schedule a Ducati Test Ride</h1>
+    <form action="/testride" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+      <br><br>
+      <label for="model">Select a Model:</label>
+      <select id="model" name="model" required>
+        <option value="">Select a Model</option>
+        <option value="Ducati Panigale V4">Ducati Panigale V4</option>
+        <option value="Ducati Monster">Ducati Monster</option>
+        <option value="Ducati Multistrada">Ducati Multistrada</option>
+        
+      </select>
+      <br><br>
+      <label for="preferred-date">Preferred Date:</label>
+      <input type="date" id="preferred-date" name="preferred-date" required>
+      <br><br>
+      <label for="message">Additional Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

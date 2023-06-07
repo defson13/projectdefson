@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ducati Models</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .carousel-container {
+      position: relative;
+    }
+    .carousel-slide {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #bbb;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer;
+    }
+    .carousel-indicators button.active {
+      background-color: #555;
+    }
+  </style>
+  <script>
+ 
+    document.addEventListener('DOMContentLoaded', function() {
+      const carouselSlide = document.querySelector('.carousel-slide');
+      const carouselItems = Array.from(carouselSlide.children);
+      const carouselIndicatorContainer = document.querySelector('.carousel-indicators');
+      const carouselIndicators = Array.from(carouselIndicatorContainer.children);
+
+     
+      const slideWidth = carouselSlide.offsetWidth;
+      carouselItems.forEach(function(item) {
+        item.style.width = slideWidth + 'px';
+      });
+
+   
+      carouselItems[0].classList.add('active');
+      carouselIndicators[0].classList.add('active');
+
+    
+      carouselIndicatorContainer.addEventListener('click', function(e) {
+        const target = e.target;
+        if (target && target.tagName === 'BUTTON') {
+          const targetIndex = carouselIndicators.indexOf(target);
+          carouselItems.forEach(function(item, index) {
+            if (index === targetIndex) {
+              item.classList.add('active');
+              carouselIndicators[index].classList.add('active');
+            } else {
+              item.classList.remove('active');
+              carouselIndicators[index].classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ducati Models</h1>
+    
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="ducati-panigale.jpg" alt="Ducati Panigale">
+          <h3>Ducati Panigale</h3>
+          <p>The Ducati Panigale is a high-performance sport bike designed for adrenaline-filled rides.</p>
+        </div>
+        <div class="carousel-item
